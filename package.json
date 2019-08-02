@@ -19,9 +19,9 @@
     "webpack": "^4.35.3"
   },
   "author": {
-    "name": "Evgenii Korolev",
-    "email": "evgeny@korolev.email",
-    "url": "https://evgenii.korolev.life"
+    "name": "Evgenii Korolev for Seidenader",
+    "url": "https://github.com/com2u/Image-view-grafana-plugin",
+    "email": "evgeny@korolev.email"
   },
   "devDependencies": {
     "@grafana/toolkit": "^6.3.0-alpha.32",
