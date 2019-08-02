@@ -7,8 +7,12 @@
     "description": "A panel for displaying images",
     "version": "1.0.0",
     "author": {
-      "name": "Evgenii Korolev",
-      "url": "https://github.com/ekorolev/"
+      "name": "Evgenii Korolev for Seidenader",
+      "url": "https://github.com/com2u/Image-view-grafana-plugin"
+    },
+    "logos": {
+      "small": "img/logo.png",
+      "large": "img/logo.png"
     }
   },
   "dependencies": {
