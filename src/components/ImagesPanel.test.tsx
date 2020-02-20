@@ -1,10 +1,11 @@
 import React from 'react';
 import { ImagesPanel } from './ImagesPanel';
 import { PluginOptions } from '../types';
-import { PanelProps } from '@grafana/ui';
+import { PanelProps } from '@grafana/data';
 import { dateTime } from '@grafana/data';
 import sinon from 'sinon';
 import Enzyme, { mount, Adapter } from 'enzyme';
+import { ThresholdsMode } from '@grafana/data';
 
 Enzyme.configure({adapter: new Adapter()});
 
@@ -15,20 +16,22 @@ test('Test something', () => {
     textColor: '#FFFFFF',
     borderColor: '#000000',
     textFontSize: 10,
-    thresholds: [],
+    thresholds: {mode: ThresholdsMode.Absolute, steps: []},
     useThreshold: false
   }
   const panelProps: PanelProps = {
     width: 100,
     height: 100,
     id: 1,
-    data: { state: null, series: [] },
+    data: { state: null, series: [], timeRange: null },
     timeRange: { from: dateTime(Date.now()-3600), to: dateTime(Date.now()), raw: { from: dateTime(Date.now()-3600), to: dateTime(Date.now()) } },
     onOptionsChange,
     options: null,
     renderCounter: 0,
     transparent: false,
-    replaceVariables: null
+    replaceVariables: null,
+    timeZone: null,
+    onChangeTimeRange: null
   }
   const props = Object.assign({}, options, panelProps)
   const wrapper = mount(<ImagesPanel { ...props} />)
