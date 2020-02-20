@@ -1,4 +1,4 @@
-import { PanelPlugin } from '@grafana/ui';
+import { PanelPlugin } from '@grafana/data';
 import { ImagesPanel } from './components/ImagesPanel';
 import { ImagesPanelEditor } from './components/ImagesPanelEditor';
 import { PluginOptions, defaultOptions } from './types';

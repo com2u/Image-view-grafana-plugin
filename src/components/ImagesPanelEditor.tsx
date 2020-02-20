@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react';
-import { FormField, PanelOptionsGroup, PanelEditorProps, ColorPicker, ThresholdsEditor, Switch } from '@grafana/ui';
+import { FormField, PanelOptionsGroup, ColorPicker, ThresholdsEditor, Switch, getTheme  } from '@grafana/ui';
+import { PanelEditorProps } from '@grafana/data';
 import { PluginOptions } from '../types';
-import { Threshold } from '@grafana/data'
+import { Threshold, ThresholdsMode } from '@grafana/data'
 
 interface State {
   imageSize: number;
   textColor: string;
   borderColor: string;
   textFontSize: number;
-  thresholds: Threshold[];
+  thresholds: {mode: ThresholdsMode.Absolute, steps: Threshold[]};
   useThreshold: boolean;
 }
 
@@ -82,6 +83,7 @@ export class ImagesPanelEditor extends PureComponent<PanelEditorProps<PluginOpti
               <ThresholdsEditor
                 thresholds={this.state.thresholds}
                 onChange={this.onThresholdChange}
+                theme={getTheme("dark")}
               />
             </div>
             )
