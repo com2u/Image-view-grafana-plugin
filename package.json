@@ -25,6 +25,8 @@
   },
   "devDependencies": {
     "@grafana/toolkit": "^6.3.0-alpha.32",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "react-test-renderer": "^16.8.6",
