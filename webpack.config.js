@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -22,7 +22,8 @@ module.exports = {
   },
   externals: ['lodash', 'moment', 'react', 'react-dom', '@grafana/ui'],
   plugins: [
-    new CleanWebpackPlugin('dist', { allowExternal: true }),
+    //new CleanWebpackPlugin('dist', { allowExternal: true }),
+    new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new CopyWebpackPlugin([
       { from: 'plugin.json', to: '.' },
