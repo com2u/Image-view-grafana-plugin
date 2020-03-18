@@ -15,9 +15,13 @@ test('Test something', () => {
     imageSize: 80,
     textColor: '#FFFFFF',
     borderColor: '#000000',
+    overlayBorderColor: '#000000',
     textFontSize: 10,
+    overlayStrokeSize: 2,
     thresholds: {mode: ThresholdsMode.Absolute, steps: []},
-    useThreshold: false
+    overlayThresholds: {mode: ThresholdsMode.Absolute, steps: []},
+    useThreshold: false,
+    useOverlayThreshold: false
   }
   const panelProps: PanelProps = {
     width: 100,
